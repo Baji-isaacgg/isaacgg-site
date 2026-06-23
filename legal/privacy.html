@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" class="lang-en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — ISAAC.GG</title>
+    <meta name="robots" content="index" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lexend:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="atm"></div>
+    <div class="grain"></div>
+
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="../index.html">
+          <svg class="shield" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 1L18 5.5V14.5L10 19L2 14.5V5.5L10 1Z" stroke="#d4a43a" stroke-width="1.4" fill="rgba(212,164,58,0.12)" />
+            <path d="M7 8.5L9.5 11L13 7" stroke="#d4a43a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          ISAAC<span class="gg">.GG</span>
+        </a>
+        <div class="langsw" style="margin-left:auto">
+          <button data-lang-btn="en">EN</button>
+          <button data-lang-btn="ja">日本語</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="legal">
+      <div class="wrap">
+        <a class="back" href="../index.html">← <span class="t-en">Back to home</span><span class="t-ja">ホームへ戻る</span></a>
+
+        <!-- ===== English ===== -->
+        <div class="t-en">
+          <h1>Privacy Policy</h1>
+          <p class="status">Draft — Code-drafted, pre-legal-review. The final version is confirmed before publication. Last updated: 2026-06-23 (draft).</p>
+
+          <h2>1. What we collect</h2>
+          <p>ISAAC.GG reads <b>Overwatch match data via the Overwolf Game Events Provider (GEP)</b> and stores it <b>locally on your PC</b> (browser IndexedDB):</p>
+          <ul>
+            <li>Match metadata (map, mode, result, duration)</li>
+            <li>Kill-feed events — including the <b>in-game names and heroes of other players</b> in your match</li>
+            <li>Your own hero/death/kill stats, focus/graduation progress, and settings</li>
+            <li>(Optional, on by default) <b>automatic death-clip recordings</b> — video files stay on your PC only</li>
+          </ul>
+
+          <h2>2. Storage and transmission</h2>
+          <p><b>By default everything is stored locally and does not leave your PC.</b> Auto-backups are written to <code>Documents/ISAAC.GG/</code> on your PC (no external upload).</p>
+          <p><b>Exception — Mode B “AI death-review” (sent only when you run it):</b> when you press the button, ISAAC sends the <b>death clip</b> you chose and its <b>match context</b> (your hero, the enemy who eliminated you and the roster hero names, the detected situation, and the coaching text used) to the ISAAC.GG server (Google Cloud Run, asia-northeast1), which forwards it to <b>Google’s Gemini API</b> for analysis.</p>
+          <ul>
+            <li>The clip and context are <b>not stored on the server</b> (pass-through only). The generated <b>reading text is stored locally on your PC</b>.</li>
+            <li>This happens <b>only when you select a death and press the button</b> — never automatically, never for every death.</li>
+            <li>The portion sent to Gemini is subject to Google’s API data handling. Ads are served via Overwolf; ad data handling follows Overwolf’s privacy policy.</li>
+          </ul>
+
+          <h2>3. Identity (Free / Pro)</h2>
+          <ul>
+            <li><b>No account or sign-in is required for the free tier.</b> To count daily usage we use a resettable device install ID that does not identify you personally.</li>
+            <li><b>Pro</b> requires signing in to Overwolf only when used, to verify your subscription via the Overwolf session token.</li>
+            <li>To prevent ad abuse we use a short-lived, server-signed ad ticket together with the install ID. Neither contains personal information.</li>
+            <li>When you agree to the terms, we record that agreement (its version and time) on your PC, and — if you are signed in to Overwolf — also on our server linked to your Overwolf account, so we can prove and carry your consent across devices. This record contains no match data.</li>
+          </ul>
+
+          <h2>4. Other players’ data</h2>
+          <p>Other players’ names from the kill feed are used <b>locally</b> to give your match context (e.g. “killed repeatedly by the same enemy”). For a death you run through Mode B, roster hero names may be sent as that reading’s context (see §2). Apart from this, other players’ names are never transmitted or published.</p>
+
+          <h2>5. Your rights (deletion)</h2>
+          <ul>
+            <li>In-app <b>Settings → Data → “Delete all data”</b> permanently removes match history, graduations, settings, death clips, and saved readings from this PC (cannot be undone).</li>
+            <li>Uninstalling alone may leave some data; use the in-app deletion for a full wipe. The server stores no clips or context.</li>
+          </ul>
+
+          <h2>6. Third parties &amp; trademarks</h2>
+          <p>ISAAC.GG is not affiliated with or endorsed by Blizzard Entertainment. Overwatch is a trademark of Blizzard Entertainment, Inc.</p>
+
+          <h2>7. Changes</h2>
+          <p>If we change how data is handled, we will update this policy. Any new feature that transmits data will, like Mode B, be <b>triggered by your explicit action (opt-in)</b>.</p>
+
+          <h2>8. Contact</h2>
+          <p>Operator: ISAAC.GG (trade name). Our legal name and address are disclosed promptly on request. Bug/privacy inquiries: <span class="blank">support@isaacgg.com</span>.</p>
+        </div>
+
+        <!-- ===== 日本語 ===== -->
+        <div class="t-ja">
+          <h1>プライバシーポリシー</h1>
+          <p class="status">草案 — Code 起草・弁護士確認前。最終版は公開前に確定します。最終更新: 2026-06-23（草案）。</p>
+
+          <h2>1. 収集する情報</h2>
+          <p>ISAAC.GG は <b>Overwolf Game Events Provider (GEP) 経由で Overwatch の試合データ</b>を読み取り、<b>あなたの PC 内（ブラウザの IndexedDB）にローカル保存</b>します。</p>
+          <ul>
+            <li>試合のメタ情報（マップ・モード・勝敗・時間）</li>
+            <li>キルフィード上のイベント（同じ試合の<b>他プレイヤーのゲーム内名・使用ヒーロー</b>を含みます）</li>
+            <li>あなた自身のヒーロー・デス・キル等の統計、フォーカス／卒業の進捗、設定</li>
+            <li>（任意・既定オン）<b>デス前後の自動録画クリップ</b>（動画ファイルはあなたの PC 内のみ）</li>
+          </ul>
+
+          <h2>2. 情報の保存場所と送信</h2>
+          <p><b>既定ではすべてローカル保存で、あなたの PC を出ません。</b> 自動バックアップはあなたの PC の <code>Documents/ISAAC.GG/</code> に書き出されます（外部送信なし）。</p>
+          <p><b>例外 — Mode B「AI デス読み解き」（実行したときだけ送信）：</b> ボタンを押したときに限り、選んだ<b>デスクリップ</b>とその<b>試合文脈</b>（あなたの使用ヒーロー、あなたを倒した敵とロスター上のヒーロー名、検出された戦況、読み解きに使うコーチング知識のテキスト）を ISAAC.GG のサーバー（Google Cloud Run, asia-northeast1）に送信し、サーバーが <b>Google の Gemini API</b> に転送して読み解きを生成します。</p>
+          <ul>
+            <li>クリップ・文脈は<b>サーバーに保存しません</b>（処理のための通過のみ）。生成された<b>読み解きテキストはあなたの PC にローカル保存</b>されます。</li>
+            <li>送信は<b>あなたがデスを選んでボタンを押したときだけ</b>発生します。自動送信や全デスの送信はしません。</li>
+            <li>Gemini への送信分は Google の API データ取り扱いに従います。広告は Overwolf 経由で表示され、その取り扱いは Overwolf のプライバシーポリシーに従います。</li>
+          </ul>
+
+          <h2>3. 身元の扱い（無料 / Pro）</h2>
+          <ul>
+            <li><b>無料の利用にアカウント登録・ログインは不要です。</b> 1 日の利用回数を数えるため、リセット可能な端末のインストール ID を用います（個人を特定しません）。</li>
+            <li><b>Pro</b> を使うときのみ Overwolf へのログインが必要で、セッショントークンで購読の有無を確認します。</li>
+            <li>広告の不正対策として、サーバー署名付きの一時的な広告チケットと上記インストール ID を用います。いずれも個人情報を含みません。</li>
+            <li>規約に同意すると、その同意（バージョンと日時）をあなたの PC に記録し、Overwolf にログイン済みの場合はあなたの Overwolf アカウントに紐づけてサーバーにも保存します（同意の証跡・端末間の引き継ぎのため）。この記録に試合データは含まれません。</li>
+          </ul>
+
+          <h2>4. 他プレイヤーのデータ</h2>
+          <p>キルフィード由来の他プレイヤー名は、あなたの試合の文脈（例:「同じ敵に倒され続けた」）を示すために<b>ローカルで</b>使用します。Mode B を実行したデスについては、ロスター上のヒーロー名がその読み解きの文脈として送信される場合があります（§2）。これら以外で他プレイヤー名を外部に送信・公開することはありません。</p>
+
+          <h2>5. あなたの権利（削除）</h2>
+          <ul>
+            <li>アプリ内の <b>設定 → データ →「すべてのデータを削除」</b>で、試合履歴・卒業記録・設定・デスクリップ動画・保存済みの読み解き結果をこの PC から完全に削除できます（取り消し不可）。</li>
+            <li>アンインストールだけでは一部データが残る場合があるため、完全削除は上記機能を使ってください。サーバーにはクリップ・文脈を保存していません。</li>
+          </ul>
+
+          <h2>6. 第三者・商標</h2>
+          <p>ISAAC.GG は Blizzard Entertainment と提携・承認関係にありません。Overwatch は Blizzard Entertainment, Inc. の商標です。</p>
+
+          <h2>7. 変更</h2>
+          <p>データの取り扱いを変える場合は本ポリシーを改定します。新たにサーバー送信を伴う機能を追加するときは、Mode B と同様に<b>あなたの明示的な操作（オプトイン）を起点</b>とします。</p>
+
+          <h2>8. 問い合わせ</h2>
+          <p>運営者: ISAAC.GG（商号）。正式名称・所在地はご請求があれば遅滞なく開示します。不具合・プライバシーに関するお問い合わせ: <span class="blank">support@isaacgg.com</span>。</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-top">
+          <a class="brand" href="../index.html">
+            <svg class="shield" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 1L18 5.5V14.5L10 19L2 14.5V5.5L10 1Z" stroke="#d4a43a" stroke-width="1.4" fill="rgba(212,164,58,0.12)" />
+              <path d="M7 8.5L9.5 11L13 7" stroke="#d4a43a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            ISAAC<span class="gg">.GG</span>
+          </a>
+          <div class="foot-links">
+            <a href="privacy.html"><span class="t-en">Privacy Policy</span><span class="t-ja">プライバシーポリシー</span></a>
+            <a href="terms.html"><span class="t-en">Terms of Use</span><span class="t-ja">利用規約</span></a>
+            <a href="tokushoho.html">特定商取引法に基づく表記</a>
+          </div>
+        </div>
+        <p class="disclaimer">Overwatch™ and Overwatch™ 2 are trademarks of Blizzard Entertainment, Inc. ISAAC.GG is an independent, third-party application and is not affiliated with, endorsed, sponsored by, or associated with Blizzard Entertainment.</p>
+      </div>
+    </footer>
+
+    <script src="../site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" class="lang-en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ISAAC.GG — Quiet AI coaching for Overwatch 2</title>
+    <meta name="description" content="ISAAC.GG reads your deaths and matches in Overwatch 2 and hands you one clear next move — after you die and after the match, never mid-fight. Passive AI coaching on Overwolf." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lexend:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="load">
+    <div class="atm"></div>
+    <div class="grid-bg"></div>
+    <div class="grain"></div>
+
+    <header>
+      <div class="wrap nav">
+        <a class="brand ld" href="#top" style="animation-delay:.02s">
+          <svg class="shield" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 1L18 5.5V14.5L10 19L2 14.5V5.5L10 1Z" stroke="#d4a43a" stroke-width="1.4" fill="rgba(212,164,58,0.12)" />
+            <path d="M7 8.5L9.5 11L13 7" stroke="#d4a43a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          ISAAC<span class="gg">.GG</span>
+        </a>
+        <nav class="nav-links" id="navlinks">
+          <a href="#features"><span class="t-en">Features</span><span class="t-ja">機能</span></a>
+          <a href="#how"><span class="t-en">How it works</span><span class="t-ja">使い方</span></a>
+          <a href="#why"><span class="t-en">Why ISAAC</span><span class="t-ja">なぜ ISAAC</span></a>
+          <a href="#pricing"><span class="t-en">Pricing</span><span class="t-ja">料金</span></a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="langsw ld" style="animation-delay:.05s">
+          <button data-lang-btn="en">EN</button>
+          <button data-lang-btn="ja">日本語</button>
+        </div>
+        <a class="btn btn-mint nav-cta ld" href="#get" style="animation-delay:.09s"><span class="t-en">Get it on Overwolf</span><span class="t-ja">Overwolf で入手</span></a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">≡</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero — HUD overlay -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <svg class="crest" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 1L18 5.5V14.5L10 19L2 14.5V5.5L10 1Z" stroke="currentColor" stroke-width="0.4" />
+              <path d="M7 8.5L9.5 11L13 7" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="killfeed ld" style="animation-delay:.1s">
+              <div class="kfhead"><span class="t-en">ISAAC reads · your deaths</span><span class="t-ja">ISAAC が読む · あなたのデス</span></div>
+              <div class="kfrow"><span class="x">✕</span> <span class="t-en">YOU&nbsp;←&nbsp;Ana</span><span class="t-ja">YOU&nbsp;←&nbsp;アナ</span> <span class="t">6:59</span></div>
+              <div class="kfrow"><span class="x">✕</span> <span class="t-en">YOU&nbsp;←&nbsp;Genji</span><span class="t-ja">YOU&nbsp;←&nbsp;ゲンジ</span> <span class="t">7:12</span></div>
+            </div>
+            <span class="label ld" style="animation-delay:.16s"><span class="t-en">Passive AI coaching · Overwatch 2</span><span class="t-ja">受動 AI コーチング · オーバーウォッチ 2</span></span>
+            <h1>
+              <span class="ld" style="animation-delay:.22s; display:block"><span class="t-en">Every death,</span><span class="t-ja">すべてのデスを、</span></span>
+              <span class="ld ln2" style="animation-delay:.3s; display:block"><span class="t-en">decoded.</span><span class="t-ja">読み解く。</span></span>
+            </h1>
+            <p class="lede ld" style="animation-delay:.36s"><span class="t-en">ISAAC reads your deaths and matches and tells you <b style="color:var(--ink);font-weight:600">what could win the next fight</b> — not just what went wrong. One clear move, after you die and after the match, never mid-fight.</span><span class="t-ja">ISAAC があなたのデスと試合を読み解き、<b style="color:var(--ink);font-weight:600">次のファイトで勝てる一手</b>を手渡します — 「何が悪かったか」ではなく。デス後・試合後に、ひとつだけ。戦闘中には出しません。</span></p>
+            <div class="hero-foot ld" style="animation-delay:.42s">
+              <a class="btn btn-mint" href="#get"><span class="t-en">Get it on Overwolf →</span><span class="t-ja">Overwolf で入手 →</span></a>
+              <a class="txtlink" href="#how"><span class="t-en">See how it works</span><span class="t-ja">使い方を見る</span></a>
+            </div>
+            <div class="readout ld" style="animation-delay:.5s">
+              <div class="pip"><span class="t-en">OW2 · GEP connected</span><span class="t-ja">OW2 · GEP 接続</span></div>
+              <div><b>NO</b> <span class="t-en">aim assist</span><span class="t-ja">エイム補助</span></div>
+              <div><b>NO</b> <span class="t-en">memory reads</span><span class="t-ja">メモリ読取</span></div>
+              <div><span class="t-en">LOCAL-FIRST</span><span class="t-ja">ローカル優先</span></div>
+            </div>
+          </div>
+
+          <div class="visual ld" style="animation-delay:.46s">
+            <div class="card">
+              <div class="seclabel report"><span class="t-en">Death Report</span><span class="t-ja">デスレポート</span></div>
+              <div class="head"><span class="t-en">Killed by Ana (3× this match)</span><span class="t-ja">アナに倒された（この試合 3 回目）</span></div>
+              <span class="chip"><span class="t-en">Support went down 4s earlier</span><span class="t-ja">4 秒前にサポートがダウン</span></span>
+              <div class="sep"></div>
+              <div class="seclabel win"><span class="t-en">What Could Win This</span><span class="t-ja">勝ち筋</span></div>
+              <div class="move"><span class="badge go"><span class="t-en">NEXT MOVE</span><span class="t-ja">次の一手</span></span> <span class="mv"><span class="t-en">Wait for heals at the corner, then re-push together.</span><span class="t-ja">回復が戻るまで角で待ち、揃ってから押し直す。</span></span></div>
+            </div>
+            <div class="card threat">
+              <div class="tag"><span class="t-en">Team threat</span><span class="t-ja">チーム脅威</span></div>
+              <div class="body2"><span class="t-en">Genji — 3 kills in a row, snowballing. Only fight them with numbers.</span><span class="t-ja">ゲンジ — 3 連続で勢いに乗ってる。数を合わせて確実に止める。</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The idea / AI-trainer analogy -->
+      <section id="idea">
+        <div class="wrap story">
+          <span class="label rise"><span class="t-en">// The idea</span><span class="t-ja">// 考え方</span></span>
+          <h2 class="rise"><span class="t-en">You don’t need more effort.<br /><span class="dim">You need the right effort.</span></span><span class="t-ja">必要なのは、もっと努力すること<br /><span class="dim">ではなく、正しい努力。</span></span></h2>
+          <div class="story-grid">
+            <div class="rise">
+              <p><span class="t-en">You queue up. You want to climb. The drive is there. But getting better at Overwatch can feel like trying to lose weight with <b>100 random sit-ups</b> — effort with no direction. You grind, and the rank doesn’t move.</span><span class="t-ja">キューに入る。上手くなりたい。気持ちもある。でも OW2 の上達は、痩せたくて<b>「とりあえず腹筋 100 回」</b>をやるのに似ています — 方向のない努力。続かないし、ランクも動かない。</span></p>
+              <p><span class="t-en">A good trainer doesn’t tell you you’re out of shape. They say: <b>“3 sets of 15 squats — lower-body strength drives your metabolism most.”</b> Specific. Efficient. Doable.</span><span class="t-ja">良いトレーナーは「運動不足だね」とは言いません。<b>「スクワット 15 回 × 3 セット。下半身強化が代謝に一番効くから」</b>と言う。具体的で、効率的で、できる。</span></p>
+              <p><span class="t-en">ISAAC is that trainer for Overwatch 2 — it turns your deaths into the one move that could win the next fight, and tells you <b>why</b>.</span><span class="t-ja">ISAAC は OW2 における、その AI トレーナーです — あなたのデスを「次のファイトで勝てる一手」に変え、<b>その理由</b>まで手渡します。</span></p>
+            </div>
+            <div class="swap-frame panel rise">
+              <div class="swap-old"><span class="t-en">What went wrong</span><span class="t-ja">何が悪かったか</span></div>
+              <div class="swap-arrow">↓</div>
+              <div class="swap-new"><span class="t-en">What could<br />win this.</span><span class="t-ja">次に何をすれば<br />勝てるか。</span></div>
+            </div>
+          </div>
+          <ul class="proof rise">
+            <li><span class="ck">✓</span> <span class="t-en">Every tip ends on a move you can make — <b>“do this,”</b> never “don’t die.”</span><span class="t-ja">どのヒントも<b>「こうする」</b>で終わる — 「死ぬな」とは言いません（接近形）。</span></li>
+            <li><span class="ck">✓</span> <span class="t-en">No blame, ever — it points at <b>the moment, not at you</b> (no failure or shame words).</span><span class="t-ja">決して責めない — <b>場面に帰属</b>し、あなたを評価しません（失敗語・羞恥語なし）。</span></li>
+            <li><span class="ck">✓</span> <span class="t-en">Even your good plays become a <b>repeatable “why you won.”</b></span><span class="t-ja">良かった動きも<b>再現できる「勝因」</b>に変えます（勝因転換）。</span></li>
+            <li><span class="ck">✓</span> <span class="t-en">The in-game panel is literally labelled <b>“What Could Win This.”</b></span><span class="t-ja">in-game のコーチング欄は、文字どおり<b>「勝ち筋」</b>と名付けています。</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <div class="wrap">
+          <div class="sec-head rise">
+            <span class="label"><span class="t-en">// Module 01 — What it does</span><span class="t-ja">// モジュール 01 — できること</span></span>
+            <h2><span class="t-en">Coaching that respects the fight.</span><span class="t-ja">戦闘を邪魔しないコーチング。</span></h2>
+            <p class="lede"><span class="t-en">No overlay screaming mid-teamfight. ISAAC speaks at the only two moments you can listen — when you’re dead, and when the match is over.</span><span class="t-ja">乱戦中に喚くオーバーレイはありません。本当に聞ける 2 つの瞬間だけ — デスして待つ間と、試合が終わったあと。</span></p>
+          </div>
+          <div class="features">
+            <div class="feat panel rise">
+              <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddc97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+              <div class="fl">01</div>
+              <h3><span class="t-en">In-game death HUD</span><span class="t-ja">in-game デス HUD</span></h3>
+              <p><span class="t-en">While you wait to respawn, one short, specific tip — what happened, why, the next move. Then it’s gone.</span><span class="t-ja">リスポーンを待つ間、短く具体的なヒントをひとつ — 何が・なぜ・次の一手。そして消える。</span></p>
+            </div>
+            <div class="feat panel rise">
+              <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddc97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h12v16H6a2 2 0 0 1-2-2Z"/><path d="M8 4v16"/></svg></div>
+              <div class="fl">02</div>
+              <h3><span class="t-en">Hero knowledge library</span><span class="t-ja">ヒーロー知識図鑑</span></h3>
+              <p><span class="t-en">Matchups, abilities and tips for all 51 heroes — a calm reference you grow into.</span><span class="t-ja">全 51 ヒーローの対面・アビリティ・コツ。少しずつ育てる静かな図鑑。</span></p>
+            </div>
+            <div class="feat panel rise">
+              <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddc97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M21 8V3h-5"/></svg></div>
+              <div class="fl">03</div>
+              <h3><span class="t-en">Progress &amp; graduation</span><span class="t-ja">進捗と卒業</span></h3>
+              <p><span class="t-en">See a habit change — deaths per 10, focus streaks, milestones. Loud only at the finish line.</span><span class="t-ja">習慣が変わるのが見える — 10 分デス・継続・節目。ゴールだけ大きく。</span></p>
+            </div>
+            <div class="feat panel gold wide rise">
+              <div>
+                <span class="pro-badge">PRO</span>
+                <h3 style="font-size:21px"><span class="t-en">Heaviest deaths, read with match context</span><span class="t-ja">重かったデスを、試合文脈ごと読み解く</span></h3>
+                <p style="margin-top:9px"><span class="t-en">After a match, ISAAC surfaces the three deaths that mattered most. When you run AI Death Reading, only those clips are sent with the facts ISAAC already knows: your hero, who eliminated you, the roster at that moment, repeat-death / enemy-swap signals, clip kills, and the coaching knowledge that fits. Gemini gets a grounded brief, not just raw video — then returns what was visible, why it was risky, and one next move.</span><span class="t-ja">試合後、ISAAC は影響が大きかった 3 つのデスを自動で並べます。AI 読み解きを押したときだけ、対象クリップに「使用ヒーロー、撃破者、その時点のロスター、連続死・敵スワップ、クリップ内キル、該当するヒーロー知識」を添えて送信。Gemini に渡すのは動画だけではなく、ISAAC が持つ事実の背骨です。だから返ってくるのは感想ではなく、「何が見えたか／なぜ危なかったか／次の一手」まで絞ったレビューです。</span></p>
+              </div>
+              <div class="card review" style="margin:0">
+                <div class="tag"><span class="t-en">AI death-review</span><span class="t-ja">AI デス読み解き</span></div>
+                <div class="head"><span class="t-en">Caught alone on the flank as 3 enemies rotated in</span><span class="t-ja">敵 3 枚が回り込む中、サイドで単独になっていた</span></div>
+                <div class="rv"><span class="rl">WHY</span><span class="t-en">Your team couldn’t follow in time, so the pick turned into a 1v3.</span><span class="t-ja">味方が追いつけず、ピックが 1v3 になった。</span></div>
+                <div class="rv next"><span class="rl">DO NEXT</span><span class="t-en">Take the flank with a teammate — if you go solo, pull out within ~2 seconds.</span><span class="t-ja">サイドは味方と同時に。単独なら 2 秒ほどで引く。</span></div>
+                <div class="conf"><span class="badge" style="background:var(--gold-bg);color:var(--gold)">PRO</span> <span class="t-en">CONFIDENCE: medium · video + match data · only after you press</span><span class="t-ja">確度: 中 · 映像＋試合データ · 押したときだけ送信</span></div>
+              </div>
+              <div class="figcap"><span class="t-en">* representative format — what happened / why / do next + confidence</span><span class="t-ja">※ 表示形式の代表例 — 何が起きたか／なぜ／次の一手＋確度</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What it measures (detailed) -->
+      <section id="measures">
+        <div class="wrap">
+          <div class="sec-head rise">
+            <span class="label"><span class="t-en">// What it measures</span><span class="t-ja">// 計測していること</span></span>
+            <h2><span class="t-en">Reads from the game, not guesses.</span><span class="t-ja">推測ではなく、ゲームの実測から。</span></h2>
+            <p class="lede"><span class="t-en">Everything ISAAC says is built from measurable events — here’s what it actually tracks.</span><span class="t-ja">ISAAC の言うことは、すべて計測できるイベントから組み立てています。実際に追っているのはこれです。</span></p>
+          </div>
+          <div class="measures-grid">
+            <div class="metric panel rise">
+              <div class="ml">D / 10 MIN</div>
+              <h3><span class="t-en">Deaths per 10 minutes</span><span class="t-ja">10 分あたりのデス数</span></h3>
+              <p><span class="t-en">Your death rate over time — the number ISAAC watches to tell if a habit is actually changing, match-to-match and against your usual.</span><span class="t-ja">時間で正規化したデス率。習慣が本当に変わったかを測る基準値で、試合ごと・平常時との比較に使います。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">TEAM THREAT</div>
+              <h3><span class="t-en">Who’s actually dangerous</span><span class="t-ja">敵チームで誰が脅威か</span></h3>
+              <p><span class="t-en">Flags the enemy who’s snowballing a kill streak, hunting your supports, topping damage and kills, or repeatedly landing the opening pick — so you know who to peel, avoid, or focus.</span><span class="t-ja">連続キルで勢いに乗っている／味方サポートを狙っている／火力もキルも多い／膠着を崩す先制キルが多い敵を指摘。誰を守り、避け、フォーカスすべきか分かります。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">DEATH PATTERNS</div>
+              <h3><span class="t-en">How you tend to die</span><span class="t-ja">あなたの崩れ方</span></h3>
+              <p><span class="t-en">Recurring shapes: caught right after your support falls, isolated in a stalemate, or the death that triggers a full team wipe.</span><span class="t-ja">繰り返す型：サポートが落ちた直後／膠着での孤立／全滅の引き金になるデス。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">PIVOTAL DEATH</div>
+              <h3><span class="t-en">The one that mattered</span><span class="t-ja">一番効いた 1 デス</span></h3>
+              <p><span class="t-en">Of all your deaths in a match, the single one that swung the fight — surfaced with its timestamp and who killed you.</span><span class="t-ja">その試合で最も影響の大きかった 1 つのデスを、経過時刻と倒した敵つきで提示。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">MATCHUP DIRECTION</div>
+              <h3><span class="t-en">Favorable, even, or hard</span><span class="t-ja">有利・五分・不利</span></h3>
+              <p><span class="t-en">For each of your heroes, whether a matchup is favorable, even, or hard — and a swap from heroes you already play.</span><span class="t-ja">あなたの各ヒーローについて対面が有利・五分・不利か。さらに、あなたの得意プールからのスワップ候補も。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">FOCUS / GRADUATION</div>
+              <h3><span class="t-en">One habit at a time</span><span class="t-ja">一度にひとつの課題</span></h3>
+              <p><span class="t-en">ISAAC picks one thing to work on, tracks it across matches, and “graduates” it once it actually improves.</span><span class="t-ja">取り組む課題を 1 つに絞り、試合をまたいで追跡。実際に改善したら「卒業」します。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">MAP RECORD</div>
+              <h3><span class="t-en">You, on this map</span><span class="t-ja">このマップのあなた</span></h3>
+              <p><span class="t-en">Your recent win–loss on the current map, and whether you die more there than you usually do.</span><span class="t-ja">現在のマップでの直近の勝敗と、そこで普段よりデスが多いかどうか。</span></p>
+            </div>
+            <div class="metric panel rise">
+              <div class="ml">CONFIDENCE</div>
+              <h3><span class="t-en">How sure it is</span><span class="t-ja">確度の明示</span></h3>
+              <p><span class="t-en">Every read is labelled measured, inferred, or from your own history — so you always know how far to trust it.</span><span class="t-ja">すべての読み解きに「実測／推定／あなたの履歴から」のラベル。どこまで信じるべきかが常に分かります。</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how">
+        <div class="wrap">
+          <div class="sec-head rise">
+            <span class="label"><span class="t-en">// Module 02 — How it works</span><span class="t-ja">// モジュール 02 — 使い方</span></span>
+            <h2><span class="t-en">Play. Die. Get one clear move.</span><span class="t-ja">プレイ。デス。次の一手をひとつ。</span></h2>
+          </div>
+          <div class="steps">
+            <div class="step panel rise"><div class="sn">01</div><h3><span class="t-en">Just play</span><span class="t-ja">ただプレイする</span></h3><p><span class="t-en">ISAAC runs quietly on Overwolf and reads your match through official game events — no memory reads, no aim help.</span><span class="t-ja">Overwolf 上で静かに動き、公式ゲームイベントから試合を読みます。メモリ読取もエイム補助もなし。</span></p></div>
+            <div class="step panel rise"><div class="sn">02</div><h3><span class="t-en">It reads your deaths</span><span class="t-ja">デスを読み解く</span></h3><p><span class="t-en">Each death is matched to a pattern — support fell first, caught alone, the team threat snowballing.</span><span class="t-ja">各デスをパターンに照合 — サポート先落ち、孤立、脅威の雪だるま化。</span></p></div>
+            <div class="step panel rise"><div class="sn">03</div><h3><span class="t-en">One next move</span><span class="t-ja">次の一手</span></h3><p><span class="t-en">A specific action during respawn and a short plan after the match. The richer read deepens over your first few games.</span><span class="t-ja">リスポーン中に具体的な行動を 1 つ、試合後に短いプランを。本格的な読み解きは最初の数試合で深まります。</span></p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why ISAAC -->
+      <section id="why">
+        <div class="wrap">
+          <div class="sec-head rise">
+            <span class="label"><span class="t-en">// Module 03 — Why ISAAC</span><span class="t-ja">// モジュール 03 — なぜ ISAAC</span></span>
+            <h2><span class="t-en">A coach, not a casino.</span><span class="t-ja">気を引くためではなく、上手くなるために。</span></h2>
+            <p class="lede"><span class="t-en">Most tools farm your attention. ISAAC is the opposite — a quiet coach that makes you stronger, then leaves you alone.</span><span class="t-ja">多くのツールは、開かせ続けるために作られています。ISAAC は逆です。必要なときだけ短く伝え、身についたら静かに引く。そういうコーチです。</span></p>
+          </div>
+          <div class="philo">
+            <div class="col dont panel rise">
+              <h3><span class="t-en">We don’t</span><span class="t-ja">やらないこと</span></h3>
+              <ul>
+                <li><span class="mk" style="color:var(--red)">✕</span> <span class="t-en">Shout during teamfights</span><span class="t-ja">乱戦中に喚く</span></li>
+                <li><span class="mk" style="color:var(--red)">✕</span> <span class="t-en">Shame you for dying or losing</span><span class="t-ja">デスや敗北を責める</span></li>
+                <li><span class="mk" style="color:var(--red)">✕</span> <span class="t-en">Push daily streaks &amp; FOMO</span><span class="t-ja">デイリー連続記録や FOMO で煽る</span></li>
+                <li><span class="mk" style="color:var(--red)">✕</span> <span class="t-en">Reveal enemies or assist aim</span><span class="t-ja">敵位置の表示・エイム補助</span></li>
+                <li><span class="mk" style="color:var(--red)">✕</span> <span class="t-en">Read game memory or modify the game</span><span class="t-ja">メモリ読取・ゲーム改変</span></li>
+              </ul>
+            </div>
+            <div class="col do panel rise">
+              <h3><span class="t-en">We do</span><span class="t-ja">やること</span></h3>
+              <ul>
+                <li><span class="mk" style="color:var(--mint)">✓</span> <span class="t-en">Speak only after death &amp; match</span><span class="t-ja">デス後・試合後にだけ話す</span></li>
+                <li><span class="mk" style="color:var(--mint)">✓</span> <span class="t-en">Stick to facts from game events</span><span class="t-ja">公式イベントの事実に徹する</span></li>
+                <li><span class="mk" style="color:var(--mint)">✓</span> <span class="t-en">Give one clear, doable move</span><span class="t-ja">具体的で実行できる一手をひとつ</span></li>
+                <li><span class="mk" style="color:var(--mint)">✓</span> <span class="t-en">Celebrate milestones, then go quiet</span><span class="t-ja">節目は祝い、また静かに</span></li>
+                <li><span class="mk" style="color:var(--mint)">✓</span> <span class="t-en">Keep your data on your PC</span><span class="t-ja">データはあなたの PC に</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing">
+        <div class="wrap">
+          <div class="sec-head rise">
+            <span class="label"><span class="t-en">// Module 04 — Pricing</span><span class="t-ja">// モジュール 04 — 料金</span></span>
+            <h2><span class="t-en">Start free. Go deeper with Pro.</span><span class="t-ja">無料で始めて、Pro で深く。</span></h2>
+          </div>
+          <div class="plans">
+            <div class="plan panel rise">
+              <div class="name">Free</div>
+              <div class="price">$0</div>
+              <div class="sub"><span class="t-en">Ad-supported</span><span class="t-ja">広告つき</span></div>
+              <ul>
+                <li><span style="color:var(--mint)">✓</span> <span class="t-en">Passive coaching after death &amp; match</span><span class="t-ja">デス後・試合後の受動コーチング</span></li>
+                <li><span style="color:var(--mint)">✓</span> <span class="t-en">Full hero knowledge library</span><span class="t-ja">ヒーロー知識図鑑（全体）</span></li>
+                <li><span style="color:var(--mint)">✓</span> <span class="t-en">Progress, focus &amp; graduation</span><span class="t-ja">進捗・フォーカス・卒業</span></li>
+              </ul>
+              <a class="btn btn-mint" href="#get" style="width:100%;justify-content:center"><span class="t-en">Get started</span><span class="t-ja">はじめる</span></a>
+            </div>
+            <div class="plan pro panel rise">
+              <div class="name">Pro</div>
+              <div class="price">$6.99 <small><span class="t-en">/ mo · $49.99 / yr</span><span class="t-ja">/ 月 · $49.99 / 年</span></small></div>
+              <div class="sub"><span class="t-en">Ad-free</span><span class="t-ja">広告なし</span></div>
+              <ul>
+                <li><span style="color:var(--gold)">★</span> <b><span class="t-en">Heaviest-death AI review</span><span class="t-ja">重かったデスの AI 読み解き</span></b> — <span class="t-en">5 runs / day</span><span class="t-ja">1 日 5 回</span></li>
+                <li><span style="color:var(--gold)">★</span> <span class="t-en">No ads, anywhere</span><span class="t-ja">広告なし</span></li>
+                <li><span style="color:var(--gold)">★</span> <span class="t-en">Coaching that grows more personal</span><span class="t-ja">あなた専用に育つコーチング</span></li>
+                <li><span style="color:var(--gold)">★</span> <span class="t-en">Everything in Free</span><span class="t-ja">Free の全機能</span></li>
+              </ul>
+              <a class="btn btn-gold" href="#get" style="width:100%;justify-content:center"><span class="t-en">Go Pro</span><span class="t-ja">Pro にする</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="wrap">
+          <div class="sec-head rise">
+            <span class="label">// FAQ</span>
+            <h2><span class="t-en">Fair questions.</span><span class="t-ja">よくある質問。</span></h2>
+          </div>
+          <div class="faq rise">
+            <div class="qa">
+              <button><span><span class="t-en">Is ISAAC allowed? Will it get me banned?</span><span class="t-ja">使っても大丈夫？ BAN されない？</span></span> <span class="pm">+</span></button>
+              <div class="a"><p><span class="t-en">ISAAC uses only Overwolf’s official game events. It does not read game memory, reveal live enemy positions, assist your aim, or modify the game. It’s an independent app, not affiliated with Blizzard.</span><span class="t-ja">ISAAC は Overwolf の公式ゲームイベントだけを使います。メモリ読取・敵の現在位置表示・エイム補助・ゲーム改変は一切しません。独立したアプリで、Blizzard とは非提携です。</span></p></div>
+            </div>
+            <div class="qa">
+              <button><span><span class="t-en">Does it distract me during fights?</span><span class="t-ja">戦闘中に邪魔にならない？</span></span> <span class="pm">+</span></button>
+              <div class="a"><p><span class="t-en">Never. Coaching appears only after your own death (during respawn) and after the match — never during active combat.</span><span class="t-ja">出ません。コーチングは自分のデス後（リスポーン中）と試合後にだけ表示し、戦闘中には出しません。</span></p></div>
+            </div>
+            <div class="qa">
+              <button><span><span class="t-en">What’s the difference between Free and Pro?</span><span class="t-ja">Free と Pro の違いは？</span></span> <span class="pm">+</span></button>
+              <div class="a"><p><span class="t-en">Free gives passive coaching, the full hero library, and progress tracking, supported by ads. Pro removes ads and unlocks AI Death Reading for the heaviest deaths in a match, up to five runs per day.</span><span class="t-ja">Free は受動コーチング・ヒーロー図鑑・進捗（広告つき）。Pro は広告なしで、試合ごとの重かったデスを AI で読み解く機能を 1 日 5 回まで解放します。</span></p></div>
+            </div>
+            <div class="qa">
+              <button><span><span class="t-en">Where does my data go?</span><span class="t-ja">データはどこへ行く？</span></span> <span class="pm">+</span></button>
+              <div class="a"><p><span class="t-en">By default everything stays on your PC. The exception is AI Death Reading: only when you press the button, ISAAC sends the review-target death clips and their match context for analysis. It never uploads clips automatically in the background.</span><span class="t-ja">既定ではすべてあなたの PC に留まります。例外は AI デス読み解きだけで、ボタンを押したときに限り、読み解き対象のデスクリップと試合文脈を送信します。バックグラウンドで勝手にアップロードすることはありません。</span></p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing -->
+      <section class="closing" id="get">
+        <div class="wrap">
+          <div class="panel rise">
+            <span class="label"><span class="t-en">Free to start</span><span class="t-ja">無料で始められます</span></span>
+            <h2><span class="t-en">Stop guessing why you died.</span><span class="t-ja">「なぜ死んだか」を、もう推測しない。</span></h2>
+            <a class="btn btn-mint" href="#" style="font-size:15px;padding:13px 28px"><span class="t-en">Get it on Overwolf →</span><span class="t-ja">Overwolf で入手 →</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-top">
+          <a class="brand" href="#top">
+            <svg class="shield" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 1L18 5.5V14.5L10 19L2 14.5V5.5L10 1Z" stroke="#d4a43a" stroke-width="1.4" fill="rgba(212,164,58,0.12)" />
+              <path d="M7 8.5L9.5 11L13 7" stroke="#d4a43a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            ISAAC<span class="gg">.GG</span>
+          </a>
+          <div class="foot-links">
+            <a href="legal/privacy.html"><span class="t-en">Privacy Policy</span><span class="t-ja">プライバシーポリシー</span></a>
+            <a href="legal/terms.html"><span class="t-en">Terms of Use</span><span class="t-ja">利用規約</span></a>
+            <a href="legal/tokushoho.html">特定商取引法に基づく表記</a>
+          </div>
+        </div>
+        <p class="disclaimer">Overwatch™ and Overwatch™ 2 are trademarks of Blizzard Entertainment, Inc. ISAAC.GG is an independent, third-party application and is not affiliated with, endorsed, sponsored by, or associated with Blizzard Entertainment or any of its affiliates. All game names, hero names, and related marks are the property of their respective owners and are used for identification and descriptive purposes only.</p>
+        <div class="copy">© 2026 ISAAC.GG · Intelligence System for Auto AI Coaching</div>
+      </div>
+    </footer>
+
+    <script src="site.js"></script>
+  </body>
+</html>
