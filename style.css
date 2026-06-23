@@ -4,6 +4,18 @@
    PC-first sizing — type is deliberately restrained (no oversized display). HUD chrome: thin rules,
    corner brackets, a faint coordinate grid, kill-feed ticker, status pips. */
 
+/* Self-hosted fonts — no third-party (Google) request, so the site sets no tracking cookies.
+   Latin: Space Grotesk / Lexend / JetBrains Mono (woff2 in assets/fonts/). Japanese: system fonts. */
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/fonts/space-grotesk-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/fonts/space-grotesk-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 700; font-display: swap; src: url('assets/fonts/space-grotesk-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Lexend'; font-style: normal; font-weight: 300; font-display: swap; src: url('assets/fonts/lexend-latin-300-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Lexend'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/fonts/lexend-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Lexend'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/fonts/lexend-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Lexend'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/fonts/lexend-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/fonts/jetbrains-mono-latin-600-normal.woff2') format('woff2'); }
+
 :root {
   --base: #0b0d10;
   --surface: #11141a;
@@ -26,8 +38,8 @@
   --line: rgba(255, 255, 255, 0.09);
   --line2: rgba(255, 255, 255, 0.05);
 
-  --display: 'Space Grotesk', 'Lexend', 'Noto Sans JP', sans-serif;
-  --sans: 'Lexend', 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI', system-ui, sans-serif;
+  --display: 'Space Grotesk', 'Lexend', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', Meiryo, system-ui, sans-serif;
+  --sans: 'Lexend', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', Meiryo, system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
   --maxw: 1200px;
 }
